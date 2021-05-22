@@ -5,10 +5,14 @@
 
     <style>
     .page{
-        display: flex;
+        display: flexbox;
         flex-direction: column;  
         border-style: solid;
         border-color: red;
+        height: auto;
+    }
+    .center{
+        padding-top: 13%;
     }
     .logo{
        display: flex;
@@ -20,28 +24,43 @@
         display: flex;
         justify-content: center;
     }
+    .buttonholder{
+        display: flex;
+        justify-content: center;
+    }
     .buttons{
         display: flex;
         box-shadow: 0 1px 1px rgba(0,0,0,.1);
         background-color: #f8f9fa;
-        border: 1px solid #dadce0;
+        border: 1px solid #f8f9fa;
         color: #202124;
-        justify-content: center;
-        padding: 20px;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        cursor: pointer;
+        user-select: none; 
+        text-align: center; 
+        
     }
-    .button1{
-        padding-right: 5px;
-    }
-    .button2{
-        padding-left: 5px;
+    .buttons:hover{
+        box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124; 
     }
 
     </style>
 </head>
 <body>
 <div class="page">
-    </div>
-   <div class="logo">
+    <div class="center">
+
+    <div class="logo">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
         </form>
     </div>
@@ -49,13 +68,12 @@
         <form class="searchbar" action=" " method=" ">
             <input for="search" type="text">
     </div>
-    <div class="buttons">
-        <button class="button1">
-            Google search
+    <div class="buttonholder">
+        <input class="buttons" value="Google Search" type="submit">
         </button>
-        <button class="button2">
-            I'm Feeling Lucky
+        <input class="buttons" value="I'm Feeling Lucky" type="submit">
         </button>
+    </div>
     </div>
 </div>
 </body>
