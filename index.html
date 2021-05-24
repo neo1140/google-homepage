@@ -4,12 +4,15 @@
     <title>Google Recreation</title>
 
     <style>
+
+    .links:hover{
+        text-decoration: underline;
+    }
     .page{
-        display: flexbox;
-        flex-direction: column;  
-        border-style: solid;
-        border-color: red;
-        height: auto;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
     }
     .center{
         padding-top: 13%;
@@ -53,16 +56,64 @@
         border: 1px solid #dadce0;
         color: #202124; 
     }
+    .space{
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+    .footer{ 
+        font-family: Arial, sans-serif;
+        display: flex;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        color:#70757a;
+        justify-content: space-between;
+        font-size: 14px;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 0 20px;
+        white-space: nowrap;
+       
+        
+    }
+    .footerlinksleft{
+        display: flex;
+        order: 1;
+        justify-content: flex-start;
+        min-width: 30%;
+    }
+    .footerlinksmiddle{
+        display: flex;
+        order: 2;
+        justify-content: center;
+        padding: 15px;
+    }
+    .footerlinksright{
+        display: flex;
+        order: 3;
+        justify-content: flex-end;
+        min-width: 30%;
+    }
+    .leaf{
+        display: block;
+        height: 14px;
+        margin-right: 6px;
+    }
+    .links{
+        display: block;
+    }
+    .paddedlinks{
+        padding: 15px;
+    }
 
     </style>
 </head>
-<body>
-<div class="page">
+<body class="page">
     <div class="center">
 
     <div class="logo">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        </form>
     </div>
     <div class="searchbar">
         <form class="searchbar" action=" " method=" ">
@@ -75,6 +126,17 @@
         </button>
     </div>
     </div>
-</div>
+    <div class="space">
+         
+    </div>
+    <div class="footer">
+        <div class="footerlinksleft">
+            <a class="paddedlinks links">Advertising </a> <a class="paddedlinks links"> Business </a> <a class="paddedlinks links"> How Search works</a>
+        </div> 
+      <div class="footerlinksmiddle"><img class="leaf" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" alt="picture of a leaf"> <a class="links">Carbon neutral since 2007</a>
+        </div>
+        <div class="footerlinksright"><a class="paddedlinks links"> Privacy </a> <a class="paddedlinks links"> Terms </a><a class="paddedlinks links"> Settings</a>
+    </div> 
+    </div>     
 </body>
 </html>
