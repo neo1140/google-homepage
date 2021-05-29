@@ -4,7 +4,11 @@
     <title>Google Recreation</title>
 
     <style>
-
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
     .links:hover{
         text-decoration: underline;
     }
@@ -14,9 +18,50 @@
         height: 100vh;
         margin: 0;
     }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .headerleft{
+        display: flex;
+        justify-self: flex-start;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-left: 6px;
+    }
+    .headerright{
+        display: flex;
+        justify-self: flex-end;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        margin-right: 9px;
+    }
+    .headerbutton{
+        display: flex;
+        background-color: rgb(26, 115, 232);
+        border: 1px solid transparent;
+        color: #fff;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 96px;
+        cursor: pointer;
+        user-select: none; 
+        text-align: center; 
+    }
+    .headerbutton:hover{
+        box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+        background-color: #2b7de9;
+    }
     .center{
         display: flex;
-        height: calc(100% + 560px);
+        height: 625px;
         justify-content: center;
         flex-direction: column;
     }
@@ -127,16 +172,41 @@
         height: 14px;
         margin-right: 6px;
     }
+    .dots{
+        height: 22px;
+        padding: 8px;
+        margin-top: 10px;
+    }
+    .dots:hover{
+        background-color: #d8dde2;
+        box-shadow: #70757a;
+        border-radius: 100px;
+    }
     .links{
         display: block;
     }
     .paddedlinks{
         padding: 15px;
     }
+    .headerlinks{
+        margin-top: 5px;
+    }
 
     </style>
 </head>
 <body class="page">
+    <div class="header">
+        <ul class="headerleft">
+            <li><a class="links paddedlinks headerlinks">About</a></li>
+            <li><a class="links paddedlinks headerlinks">Store</a></li>
+        </ul>
+        <ul class="headerright">
+            <li><a class="links paddedlinks headerlinks">Gmail</a></li>
+            <li><a class="links paddedlinks headerlinks">Images</a></li>
+            <a href=""> <img class="dots" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAV1BMVEX///8AAAD7+/sREREuLi4yMjIlJSVWVlYrKysxMTHm5uZZWVmUlJTc3Nw4ODikpKS1tbX09PRlZWWOjo5fX1+5ubmmpqbe3t47OztoaGjq6uoiIiK3t7chDFYjAAAC10lEQVR4nO2c4XKqMBBGjYpiQRRtrW3v+z/nre20w7SQrAusdD3n/9kxJISQfDibAQAAAAAAAAAAAMDdsi2L5SKExbIot6Nbx3V+sfL18QpLwnxXhQbVbj6mlTWtTGbJ2L+FH6yeDK19/xZ8UD/+LH3hUNtZjwlLxsOmrfZ7n7+OYC3brc3DAO1Ytdd+7/LIb1Jav4bVt9W7JXXHlf24up09rrQ6+uPCpu/oah2zXxymYMnYx2qH0DELjWL1mrvmnYP2k1XrHG9pCdnFa4dwMrR2PRpSpYqfh7OylFXp27FN1Q7h2dDSr7vKdPFyKOuosoQU6eLFUNZaZQmJPKC+yIay8rS1VDdkkS6+uK0lJF07hNta99YQN0PLzc3uZvp180Cc2BKlxZLiZdHoZxk/79xD+CRvf0UytKT8ixfveGnVWboXZCmHWO2XYa0xNx9mdeQerLo3dnSWahNJyqtqq01n6bb1xC3puLpVtLbO0m20SqlbR/xLajt6QCu19S3m6VeX54I5RGftVZaU+encLH0+yY5sdJbqeEjOc1lkl+OwrCivWPPorMaBXY/1FQAAAAAAAEAUUqbXW6RME5AyVVikTJOQMjWzZJAytbKEuDme9hIYmFiEg5Spn5iTm+CZmyhguvYfCWe6aYiboeXmZncz/bp5IE5siULK1NEynpSpxiJlKoKUqcYiZSqDlCkp06ZFyhQAAAAAAAAgji75aWlJ0CU/LS0ZuuSnpSVCl/y0tGTokp+WlrAdquSnpSVDl/y0tITcScq0Yz6xtGTcT8q09cjY0hKiO8S3tGTokp+WlhBd0MXSEqKLHllaQnRhMEtLiJsoYLr2HwlnummIm6Hl5mZ3M/26eSD6SZl6WTT6Wcb7SZlO6IPKnqktL5sPth8dj5oyNf0MfNSUqemH+TdImSb/9MDQEqNLflpaUmz/TmTclKku+WlpAQAAAAAAAAAAAIA3/gPOo1OwLkDOKgAAAABJRU5ErkJggg==" alt="dots"></a>
+            <input class="headerbutton" value="Sign in" type="submit"></input> 
+        </ul>
+    </div>
     <div class="center">
 
     <div class="logo">
@@ -151,9 +221,7 @@
     </div>
     <div class="buttonholder">
         <input class="buttons" value="Google Search" type="submit">
-        </button>
         <input class="buttons" value="I'm Feeling Lucky" type="submit">
-        </button>
     </div>
     </div>
     <div class="space">
